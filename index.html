@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Dr. Sato Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="gate" class="gate" hidden></div>
+<div class="app" id="app" data-view="home">
+  <aside class="side" aria-label="回の一覧">
+    <div class="brand">
+      <h1>Dr. Sato Library</h1>
+      <p>佐藤公威先生（PeakForce）録画版の要約・文字起こし・スクショ</p>
+    </div>
+    <form class="searchbox" id="searchForm" role="search">
+      <div class="search-row">
+        <input id="q" type="search" placeholder="例：EA Index、トラップバー、左右差" autocomplete="off" aria-label="過去の内容を検索">
+        <button class="btn" type="submit">検索</button>
+      </div>
+      <label class="opt"><input type="checkbox" id="incTranscript" checked> 文字起こしも探す</label>
+    </form>
+    <div class="tabs cattabs" role="tablist" id="catTabs" aria-label="分類">
+      <button class="tab" role="tab" type="button" data-cat="reg" aria-selected="true">勉強会</button>
+      <button class="tab" role="tab" type="button" data-cat="ex" aria-selected="false">番外編</button>
+      <button class="tab" role="tab" type="button" data-cat="x" aria-selected="false">X</button>
+    </div>
+    <nav class="index" id="index" aria-label="年と月"><p class="empty" style="padding:0 10px">読み込み中…</p></nav>
+    <div class="side-foot"><span class="hint" id="pubInfo"></span> <button class="linkbtn" type="button" data-act="forget">この端末のパスワード記憶を消す</button></div>
+  </aside>
+  <main class="main" id="main"></main>
+</div>
+<div id="lb" class="lightbox" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
